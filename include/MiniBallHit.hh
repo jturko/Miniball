@@ -42,7 +42,8 @@ public:
   void SetPosInDet  (G4ThreeVector xyz){ posInDet = xyz; };
   void SetProcName  (G4String name)    { procName = name; };
   void SetSegmentID (G4int id)         { segmentID = id; };
-
+  void SetTime      (G4double time)    { fTime = time; }//Tomer time function
+  
   G4int GetTraceID()          { return traceID; };
   G4int GetDetectorID()       { return detectorID; };
   G4double GetEdep()          { return edep; };
@@ -50,7 +51,8 @@ public:
   G4ThreeVector GetPosInDet() { return posInDet; };
   G4String GetProcName()      { return procName; };
   G4int GetSegmentID()        { return segmentID; };
-
+  G4double GetTime()	      { return fTime; }//Tomer time function
+  
 private:
   
   G4int         traceID, detectorID;
@@ -58,7 +60,7 @@ private:
   G4ThreeVector pos, posInDet;
   G4String      procName;
   G4int         segmentID;
-
+  G4double 	fTime;
 };
 
 typedef G4THitsCollection<MiniBallHit> MiniBallHitsCollection;

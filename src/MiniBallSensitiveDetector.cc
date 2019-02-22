@@ -87,6 +87,7 @@ G4bool MiniBallSensitiveDetector::ProcessHits(G4Step* aStep,
  
   
   newHit->SetDetectorID(detectorID);
+  newHit->SetTime(aStep->GetPostStepPoint()->GetGlobalTime());
 
   G4StepPoint* stepPoint;
   if(process=="Transportation")
