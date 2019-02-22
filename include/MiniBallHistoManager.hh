@@ -35,10 +35,12 @@ public:
   G4int CoreEnNBin;
   G4double CoreEnLow, CoreEnHigh;
   G4double CoreEn, CoreEnAccu;
+  G4double time;
 
   G4double MIEnergy;
   G4int MIHitSegment;
   G4ThreeVector MIPositionInDet;
+  G4ThreeVector TRInteractionPosition;	
 
   MiniBallHistogram* SegmentHisto[NB_OF_SEGMENTS];
   G4int SegmentEnNBin[NB_OF_SEGMENTS];
@@ -498,7 +500,8 @@ public:
   void SetMBInteraction(size_t det_id, size_t segment_id, G4double en,
 			G4int event_id,G4int trace_id,
 			G4ThreeVector positionInDet,
-			G4ThreeVector positionInWorld);
+			G4ThreeVector positionInWorld,
+			G4double time);
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -604,14 +607,14 @@ protected :
 
   G4ThreeVector InteractionPositionInDet;
   G4ThreeVector InteractionPositionInWorld;
-  
+
   G4int MainInteractionDetectorNb, MainInteractionSegmentNb;
   G4int MainInteractionCryostatNb;
   G4double MainInteractionEn;
 
   G4ThreeVector MainInteractionPositionInDet;
   G4ThreeVector MainInteractionPositionInWorld;
-  
+
   G4ThreeVector FirstInteractionPositionInDet;
   G4ThreeVector FirstInteractionPositionInWorld;
 
