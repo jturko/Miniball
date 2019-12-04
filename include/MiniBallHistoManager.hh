@@ -501,7 +501,7 @@ public:
 			G4int event_id,G4int trace_id,
 			G4ThreeVector positionInDet,
 			G4ThreeVector positionInWorld,
-			G4double time);
+			G4double time = 0.);
 
 //////////////////////////////////////////////////////////////////////////////
 
