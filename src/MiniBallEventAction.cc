@@ -17,6 +17,8 @@
 #include "G4ios.hh"
 #include "G4UnitsTable.hh"
 
+#include "G4SystemOfUnits.hh" // new version geant4.10 requires units
+
 MiniBallEventAction::MiniBallEventAction(MiniBallHistoManager *HM)
   : histoManager(HM)
 { }
